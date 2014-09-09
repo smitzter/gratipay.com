@@ -24,7 +24,6 @@ from gratipay.models.participant import Participant
 from gratipay.models.email_address_with_confirmation import EmailAddressWithConfirmation
 from gratipay.models import GratipayDB
 
-
 def canonical(env):
     gratipay.canonical_scheme = env.canonical_scheme
     gratipay.canonical_host = env.canonical_host
@@ -45,7 +44,6 @@ def db(env):
 
 def mail(env):
     mandrill_client = mandrill.Mandrill(env.mandrill_key)
-
     return mandrill_client
 
 def billing(env):
